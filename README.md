@@ -5,7 +5,9 @@ It imports all of the books and authors into the database from csv file.
 
 ## Environment Variables:
 
-`export DATABASE_URL=[postgres heroku addon database url]`
+```bash
+export DATABASE_URL=[postgres heroku addon database url]
+```
 
 ## Models
 
