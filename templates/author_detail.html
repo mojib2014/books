@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block title %} Books author detail {% endblock %}
+{% block style %} {% endblock %} {% block body %}
+<main id="main">
+  <h1>The Author for: {{ query }}</h1>
+  <ul>
+    <li>{{ author.name }}</li>
+  </ul>
+  <div id="horizantal-line"></div>
+  <a class="btn-link" href="{{ url_for('index') }}">Back to Search</a>
+</main>
+
+{% endblock %}

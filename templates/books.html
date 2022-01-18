@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% block title %} Books and Authors search result {%
+endblock %} {% block style %} {% endblock %} {% block body %}
+<main id="main">
+  <h1>Search result for: {{ query }}</h1>
+  <h2>Books</h2>
+  <ul>
+    {% for book in books %}
+    <li>
+      <a href="{{ url_for('books', book_id=book.id) }}">{{ book.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="horizantal-line"></div>
+  <h2>Authors</h2>
+  <ul>
+    {% for author in authors %}
+    <li>
+      <a href="{{ url_for('authors', author_id=author.id) }}"
+        >{{ author.name }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="horizantal-line"></div>
+  <a class="btn-link" href="{{ url_for('index') }}">Back to Search</a>
+</main>
+
+{% endblock %}

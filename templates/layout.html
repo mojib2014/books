@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+              *,
+              *::before,
+              *::after {
+                box-sizing: border-box;
+              }
+              body {
+                background-color: #fff;
+                color: #333;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-style: normal;
+              }
+              h1 {
+                align-self: center;
+              }
+              #main, form { align-items: center;
+        display: flex; flex-direction: column; justify-content: center; } #main { width:
+        80%; height: 100%; margin: auto; align-items: flex-start;} form { background-color: #fff; border: 2px solid #fff;
+        border-radius: 5px; box-shadow: 0 2px 4px #ddd; flex: 80%; width: 80%; margin:
+        auto; padding: 12px; } input[type="text"] { border: 2px solid dodgerblue; flex:
+        100%; width: 100%; margin-bottom: 12px; padding: 10px 5px; }
+        input[type="submit"] { background-color: dodgerblue; border: 2px solid
+        dodgerblue; border-radius: 5px; color: #fff; cursor: pointer; font-size:
+        inherit; margin-top: 10px; padding: 10px 15px; }
+      #horizantal-line {
+        background-color: #aaa;
+        width: 100%;
+        height: 2px;
+        margin: 15px 0;
+      }
+      .btn-link {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px;
+        background-color: dodgerblue;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+              {% block style %}
+              {% endblock %}
+    </style>
+  </head>
+  <body>
+    {% block body %} {% endblock %}
+  </body>
+</html>

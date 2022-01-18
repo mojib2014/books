@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block title %} Books | Search for books by title
+or author {% endblock %} {% block style %} {% endblock %} {% block body %}
+<main id="main">
+  <h1>Search for books by Title/Author!</h1>
+  <form action="{{ url_for('search')}}" method="post">
+    <input
+      type="text"
+      name="query"
+      placeholder="Title/Author"
+      autofocus
+      required
+    />
+    <input type="submit" value="Search" />
+  </form>
+</main>
+{% endblock %}
