@@ -9,7 +9,7 @@ It imports all of the books and authors into the database from csv file.
 
 ## Models
 
-```
+```py
 class Book(db.Model):
     __tablename__ = "books"
     id = db.Column(db.Integer, primary_key=True)
